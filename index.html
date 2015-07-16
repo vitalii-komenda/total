@@ -1,0 +1,49 @@
+<textarea id="text" cols="50" rows="20">1) Feature 1 2h
+2) Feature 2 55h
+3) Feature 3 95h</textarea>
+<div>
+	Total: 
+	<span id="total">0</span>h
+</div>
+
+
+<script>
+
+function parse(str) {
+	var re = /([0-9]+)h(?=([\s\n]|$))/g;
+	var m;
+	var values = [];
+
+	while ((m = re.exec(str)) !== null) {
+	    // View your result using the m-variable.
+		console.log(m)
+		values.push(m[1]);
+	}
+
+	return values;
+}
+function add(numbers) {
+	var res = 0;
+	numbers.forEach(function(num){
+		res += parseInt(num); 
+	});
+
+	return res;
+}
+
+var text = document.getElementById("text");
+var total = document.getElementById("total");
+
+function handleText(){
+	var values = parse(this.value);
+	debugger;
+	var res = add(values);
+
+	total.innerHTML = res;
+}
+
+text.addEventListener('keyup', handleText);
+// text.addEventListener('click', handleText);
+text.addEventListener('change', handleText);
+
+</script>
