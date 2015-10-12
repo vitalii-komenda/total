@@ -5,3 +5,6 @@ Adds hour numbers for example
 10h
 
 Total: 15h
+
+
+Demo: https://jsfiddle.net/yamorfie/9hdxL5zn/
