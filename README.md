@@ -1,6 +1,6 @@
-# estimator
+### Total
 
-Adds hour numbers for example
+Adds hours for example
 5h
 10h
 
